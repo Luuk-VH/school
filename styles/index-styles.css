@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'PokemonSolid';
+    src: url('../assets/pokemon-solid.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/Poppins-Bold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+:root {
+    --blauw: #2A75BB;
+    --donker-blauw: #1D2C5E;
+    --geel: #FFCB05;
+    --rood: #CC0000;
+    --wit: #FFFFFF;
+    --licht-grijs: #F2F2F2;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; overflow: hidden; }
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--wit);
+}
+
+.navbar {
+    background-color: var(--blauw);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    border-bottom: 4px solid var(--donker-blauw);
+}
+
+.logo {
+    font-family: 'PokemonSolid', sans-serif;
+    color: var(--geel);
+    font-size: 2.2rem;
+    margin: 0;
+    letter-spacing: 6px;
+    text-shadow: 4px 4px 0px var(--donker-blauw);
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: linear-gradient(var(--licht-grijs), var(--wit));
+}
+
+.puzzel-card {
+    background: white;
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-bottom: 8px solid var(--blauw);
+    text-align: center;
+}
+
+.game-uitleg { text-align: left; margin-bottom: 20px; }
+.game-uitleg h3 { color: var(--rood); margin-top: 0; font-size: 1.2rem; text-transform: uppercase; }
+.game-uitleg p { font-size: 0.95rem; line-height: 1.5; color: var(--donker-blauw); }
+
+.input-group { display: flex; gap: 10px; margin-top: 20px; }
+
+#codeInput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid var(--licht-grijs);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--geel);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--donker-blauw);
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover { transform: scale(1.05); }
+
+.feedback-msg { margin-top: 15px; font-weight: 600; min-height: 1.2em; }
+.success { color: #28a745; }
+.error { color: var(--rood); }
+
+.footer {
+    background-color: var(--donker-blauw);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+@media (max-width: 600px) {
+    body { overflow: auto; }
+    .input-group { flex-direction: column; }
+    .logo { font-size: 1.6rem; letter-spacing: 3px; }
+    .puzzel-card { padding: 20px; }
+}

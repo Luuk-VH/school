@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Perfect Escape Room</title>
+    <link rel="stylesheet" href="styles/index-styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h1 class="logo">PIXELPERFECT</h1>
+    </header>
+
+    <main class="hero">
+        <section class="puzzel-card">
+            <article class="game-uitleg">
+                <h3>Bevrijd de pokemons!</h3>
+                <p>Giovanni van Team Rocket heeft de pokemons gevangen!
+                    Het is aan jou de taak om ze te redden. Hij heeft ze in slaap gebracht met een bepaalde frequentie!
+                    Het is aan jou de taak om die frequentie te verbreken en de pokemons energie te geven.
+                    In ruil daarvoor geven de pokemons jou de code om verder te gaan, success!</p>
+            </article>
+
+            <hr>
+
+            <div class="input-container">
+                <div class="input-group">
+                    <input type="text" id="codeInput" placeholder="Code...">
+                    <button id="checkBtn" class="btn-primary">KRAAK CODE</button>
+                </div>
+                <p id="feedback" class="feedback-msg" aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Pixel Perfect Groep 13</p>
+    </footer>
+
+    <script src="scripts/escaperoom-code.js"></script>
+</body>
+</html>
