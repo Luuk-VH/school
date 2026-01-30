@@ -1,0 +1,57 @@
+@font-face { font-family: 'PokemonSolid'; src: url('../assets/fonts/pokemon-solid.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; src: url('../assets/fonts/poppins-regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'Poppins'; src: url('../assets/fonts/poppins-bold.ttf') format('truetype'); font-weight: 600; }
+
+:root {
+    --blauw: #2A75BB;
+    --donker-blauw: #1D2C5E;
+    --geel: #FFCB05;
+    --wit: #FFFFFF;
+    --licht-grijs: #F2F2F2;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: 'Poppins', sans-serif; }
+
+.navbar {
+    background-color: var(--blauw);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    border-bottom: 4px solid var(--donker-blauw);
+}
+
+.logo {
+    font-family: 'PokemonSolid', sans-serif;
+    color: var(--geel);
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    margin: 0;
+    text-shadow: 2px 2px 0 var(--donker-blauw);
+}
+
+.nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+.nav-links a { color: white; text-decoration: none; font-weight: 800; text-transform: uppercase; }
+.nav-links a.active { color: var(--geel); }
+
+.home-page {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/images/pi-in-doos.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-container { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+.welcome-text { color: white; max-width: 800px; padding: 20px; }
+.welcome-title {
+    font-family: 'PokemonSolid', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    color: var(--geel);
+    text-shadow: 4px 4px var(--blauw);
+    margin: 0;
+    letter-spacing: 6px;
+}
+.welcome-subtitle { font-size: 1.1rem; font-weight: 600; margin-top: 15px; }
+
+.footer { background: var(--donker-blauw); color: white; text-align: center; padding: 15px; font-size: 0.8rem; width: 100%; }

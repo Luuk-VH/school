@@ -1,0 +1,85 @@
+@font-face { font-family: 'PokemonSolid'; src: url('../assets/fonts/pokemon-solid.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; src: url('../assets/fonts/poppins-regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'Poppins'; src: url('../assets/fonts/poppins-bold.ttf') format('truetype'); font-weight: 600; }
+
+:root {
+    --blauw: #2A75BB;
+    --donker-blauw: #1D2C5E;
+    --geel: #FFCB05;
+    --geel-tint: rgba(255, 203, 5, 0.3);
+    --wit: #FFFFFF;
+    --licht-grijs: #F2F2F2;
+}
+
+* { box-sizing: border-box; }
+body.blog-layout { display: flex; flex-direction: column; min-height: 100vh; margin: 0; font-family: 'Poppins', sans-serif; }
+
+.navbar { background-color: var(--blauw); padding: 15px 40px; display: flex; align-items: center; gap: 40px; border-bottom: 4px solid var(--donker-blauw); }
+.logo { font-family: 'PokemonSolid', sans-serif; color: var(--geel); font-size: clamp(0.9rem, 1.5vw, 1.2rem); text-shadow: 2px 2px 0 var(--donker-blauw); }
+.nav-links { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+.nav-links a { color: white; text-decoration: none; font-weight: 800; text-transform: uppercase; }
+.nav-links a.active { color: var(--geel); }
+
+.blog-wrapper { display: flex; flex: 1; overflow: hidden; }
+.timeline-area { width: 160px; background: var(--licht-grijs); border-right: 4px solid var(--donker-blauw); padding: 20px 0; overflow-y: auto; }
+.timeline-column { list-style: none; padding: 0; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+
+.week-node {
+    font-family: 'PokemonSolid', sans-serif;
+    width: 65px; height: 65px; background: var(--donker-blauw); color: white;
+    border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    border: 3px solid var(--geel); flex-shrink: 0;
+}
+
+.dot-group { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+
+.interactive-dot {
+    width: 22px;
+    height: 22px;
+    background: var(--geel);
+    border: 3px solid var(--donker-blauw);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.interactive-dot:hover {
+    transform: scale(1.25);
+    background-color: var(--geel-tint);
+}
+
+.interactive-dot.active-dot {
+    background-color: var(--donker-blauw) !important;
+    border-color: var(--geel);
+    transform: scale(1.1);
+}
+
+.display-area { flex: 1; padding: 40px; overflow-y: auto; background: var(--wit); }
+.display-card { max-width: 700px; margin: 0 auto; }
+.display-card h2 { font-weight: 600; color: var(--donker-blauw); text-transform: uppercase; }
+.display-card p { line-height: 1.6; color: #333; white-space: pre-line; }
+.blog-media img { max-width: 100%; border-radius: 12px; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+.footer { background: var(--donker-blauw); color: white; text-align: center; padding: 15px; font-size: 0.8rem; }
+
+@media (max-width: 800px) {
+    .blog-wrapper { flex-direction: column; overflow: visible; }
+    .timeline-area { width: 100%; border-right: none; border-bottom: 4px solid var(--donker-blauw); }
+    .timeline-column { flex-direction: row; padding: 20px; width: max-content; }
+    .dot-group { flex-direction: row; }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-active {
+    animation: fadeIn 0.5s ease forwards;
+}

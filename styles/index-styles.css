@@ -57,7 +57,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-image: linear-gradient(var(--licht-grijs), var(--wit));
+    background-image: linear-gradient(#F2F2F2, #FFFFFF);
 }
 
 .puzzel-card {

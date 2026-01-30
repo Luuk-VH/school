@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Tijdlijn - Luuk van Hage</title>
-    <link rel="stylesheet" href="styles/index-styles.css">
+    <link rel="stylesheet" href="styles/blog-styles.css">
 </head>
 <body class="blog-layout">
     <header class="navbar">
@@ -21,33 +21,35 @@
             <ul class="timeline-column">
                 <li class="week-node">W1</li>
                 <li class="dot-group">
-                    <button class="interactive-dot" onclick="showBlog(1)"></button>
-                    <button class="interactive-dot" onclick="showBlog(2)"></button>
-                    <button class="interactive-dot" onclick="showBlog(3)"></button>
+                    <button class="interactive-dot" onclick="showBlog(1, this)"></button>
                 </li>
                 <li class="week-node">W2</li>
                 <li class="dot-group">
-                    <button class="interactive-dot" onclick="showBlog(4)"></button>
-                    <button class="interactive-dot" onclick="showBlog(5)"></button>
-                    <button class="interactive-dot" onclick="showBlog(6)"></button>
+                    <button class="interactive-dot" onclick="showBlog(2, this)"></button>
+                    <button class="interactive-dot" onclick="showBlog(3, this)"></button>
+                    <button class="interactive-dot" onclick="showBlog(4, this)"></button>
                 </li>
                 <li class="week-node">W3</li>
                 <li class="dot-group">
-                    <button class="interactive-dot" onclick="showBlog(7)"></button>
-                    <button class="interactive-dot" onclick="showBlog(8)"></button>
-                    <button class="interactive-dot" onclick="showBlog(9)"></button>
+                    <button class="interactive-dot" onclick="showBlog(5, this)"></button>
+                    <button class="interactive-dot" onclick="showBlog(6, this)"></button>
+                    <button class="interactive-dot" onclick="showBlog(7, this)"></button>
                 </li>
                 <li class="week-node">W4</li>
                 <li class="dot-group">
-                    <button class="interactive-dot" onclick="showBlog(10)"></button>
-                    <button class="interactive-dot" onclick="showBlog(11)"></button>
-                    <button class="interactive-dot" onclick="showBlog(12)"></button>
+                    <button class="interactive-dot" onclick="showBlog(8, this)"></button>
+                    <button class="interactive-dot" onclick="showBlog(9, this)"></button>
+                    <button class="interactive-dot" onclick="showBlog(10, this)"></button>
                 </li>
                 <li class="week-node">W5</li>
+                <li class="dot-group">
+                    <button class="interactive-dot" onclick="showBlog(11, this)"></button>
+                    <button class="interactive-dot" onclick="showBlog(12, this)"></button>
+                </li>
             </ul>
         </aside>
         <section class="display-area">
-            <article class="display-card">
+            <article class="display-card" id="blog-content-card">
                 <h2 id="blog-title">KIES EEN PUNT</h2>
                 <p id="blog-text">GEBRUIK DE TIJDLIJN LINKS OM DOOR MIJN PROCES TE NAVIGEREN EN DE POKEMONS TE HELPEN.</p>
                 <figure id="blog-media" class="blog-media"></figure>
